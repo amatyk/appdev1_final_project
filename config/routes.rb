@@ -61,6 +61,8 @@ Rails.application.routes.draw do
   post("/insert_dock", { :controller => "docks", :action => "create" })
           
   # READ
+  get("/", { :controller => "docks", :action => "index" })
+
   get("/docks", { :controller => "docks", :action => "index" })
   
   get("/docks/:path_id", { :controller => "docks", :action => "show" })
