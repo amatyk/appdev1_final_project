@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_04_212015) do
+ActiveRecord::Schema.define(version: 2022_12_04_231609) do
 
   create_table "docks", force: :cascade do |t|
     t.string "image"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2022_12_04_212015) do
     t.integer "owner"
     t.string "price"
     t.integer "dock_renters"
+    t.text "comment_docks"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -34,6 +36,7 @@ ActiveRecord::Schema.define(version: 2022_12_04_212015) do
     t.string "email"
     t.string "password_digest"
     t.string "renter_username"
+    t.text "renter_comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

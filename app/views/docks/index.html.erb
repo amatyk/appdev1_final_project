@@ -55,6 +55,22 @@
         <input type="text" id="dock_renters_box" name="query_dock_renters">
       </div>
 
+      <div>
+        <label for="comment_docks_box">
+          Comment docks
+        </label>
+
+        <textarea id="comment_docks_box" name="query_comment_docks" rows="3"></textarea>
+      </div>
+
+      <div>
+        <label for="description_box">
+          Description
+        </label>
+
+        <textarea id="description_box" name="query_description" rows="3"></textarea>
+      </div>
+
       <button>
         Create dock
       </button>
@@ -89,6 +105,14 @@
 
         <th>
           Dock renters
+        </th>
+
+        <th>
+          Comment docks
+        </th>
+
+        <th>
+          Description
         </th>
 
         <th>
@@ -127,6 +151,14 @@
 
         <td>
           <%= a_dock.dock_renters %>
+        </td>
+
+        <td>
+          <%= a_dock.comment_docks %>
+        </td>
+
+        <td>
+          <%= a_dock.description %>
         </td>
 
         <td>

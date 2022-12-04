@@ -42,6 +42,7 @@ class RenterAuthenticationController < ApplicationController
     @renter.password = params.fetch("query_password")
     @renter.password_confirmation = params.fetch("query_password_confirmation")
     @renter.renter_username = params.fetch("query_renter_username")
+    @renter.renter_comment = params.fetch("query_renter_comment")
 
     save_status = @renter.save
 
@@ -64,6 +65,7 @@ class RenterAuthenticationController < ApplicationController
     @renter.password = params.fetch("query_password")
     @renter.password_confirmation = params.fetch("query_password_confirmation")
     @renter.renter_username = params.fetch("query_renter_username")
+    @renter.renter_comment = params.fetch("query_renter_comment")
     
     if @renter.valid?
       @renter.save

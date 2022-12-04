@@ -55,6 +55,20 @@
       </dd>
 
       <dt>
+        Comment docks
+      </dt>
+      <dd>
+        <%= @the_dock.comment_docks %>
+      </dd>
+
+      <dt>
+        Description
+      </dt>
+      <dd>
+        <%= @the_dock.description %>
+      </dd>
+
+      <dt>
         Created at
       </dt>
       <dd>
@@ -119,6 +133,22 @@
         </label>
 
         <input type="text" id="dock_renters_box" name="query_dock_renters" value="<%= @the_dock.dock_renters %>">
+      </div>
+
+      <div>
+        <label for="comment_docks_box">
+          Comment docks
+        </label>
+
+        <textarea id="comment_docks_box" name="query_comment_docks"><%= @the_dock.comment_docks %></textarea>
+      </div>
+
+      <div>
+        <label for="description_box">
+          Description
+        </label>
+
+        <textarea id="description_box" name="query_description"><%= @the_dock.description %></textarea>
       </div>
 
       <button>
