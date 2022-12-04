@@ -10,6 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2022_12_04_212015) do
+
+  create_table "docks", force: :cascade do |t|
+    t.string "image"
+    t.string "address"
+    t.integer "owner"
+    t.string "price"
+    t.integer "dock_renters"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "owners", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.string "owner_username"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "renters", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.string "renter_username"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
