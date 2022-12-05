@@ -26,6 +26,17 @@
       <li>
         <a href="/renters">Dock renters page</a>
       </li>
+      <% if session.fetch(:owner_id) != nil%>
+      <li>
+        <a href="/owner_sign_out">Sign out</a>
+      </li>
+      <%end%>
+      <% if session.fetch(:user_id) != nil%>
+      <li>
+        <a href="/user_sign_out">Sign out</a>
+      </li>
+      <%end%>
+        
     </ul>
 
 
