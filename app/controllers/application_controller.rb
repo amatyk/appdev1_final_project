@@ -38,5 +38,9 @@ class ApplicationController < ActionController::Base
     render({ :template => "renters/index.html.erb" })
   end
 
+  def owners
+
+    render({ :template => "owners/index.html.erb" })
+  end
 
 end

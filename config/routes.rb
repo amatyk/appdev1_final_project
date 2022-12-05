@@ -32,6 +32,8 @@ Rails.application.routes.draw do
 
   # Routes for the Owner account:
 
+  get("/owners", { :controller => "application", :action => "owners" })
+
   # SIGN UP FORM
   get("/owner_sign_up", { :controller => "owner_authentication", :action => "sign_up_form" })        
   # CREATE RECORD
