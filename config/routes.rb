@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   # Routes for the Renter account:
 
+  get("/renters", { :controller => "application", :action => "renters" })
+
   # SIGN UP FORM
   get("/renter_sign_up", { :controller => "renter_authentication", :action => "sign_up_form" })        
   # CREATE RECORD

@@ -33,6 +33,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def renters
+
+    render({ :template => "renters/index.html.erb" })
+  end
 
 
 end
