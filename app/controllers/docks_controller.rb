@@ -23,8 +23,7 @@ class DocksController < ApplicationController
     the_dock.address = params.fetch("query_address")
     the_dock.owner = session.fetch(:owner_id)
     the_dock.price = params.fetch("query_price")
-    the_dock.dock_renters = params.fetch("query_dock_renters")
-    the_dock.comment_docks = params.fetch("query_comment_docks")
+    
     the_dock.description = params.fetch("query_description")
 
     if the_dock.valid?
@@ -43,8 +42,7 @@ class DocksController < ApplicationController
     the_dock.address = params.fetch("query_address")
     the_dock.owner = params.fetch("query_owner")
     the_dock.price = params.fetch("query_price")
-    the_dock.dock_renters = params.fetch("query_dock_renters")
-    the_dock.comment_docks = params.fetch("query_comment_docks")
+   
     the_dock.description = params.fetch("query_description")
 
     if the_dock.valid?
