@@ -21,7 +21,7 @@ class DocksController < ApplicationController
     the_dock = Dock.new
     the_dock.image = params.fetch("query_image")
     the_dock.address = params.fetch("query_address")
-    the_dock.owner = params.fetch("query_owner")
+    the_dock.owner = session.fetch(:owner_id)
     the_dock.price = params.fetch("query_price")
     the_dock.dock_renters = params.fetch("query_dock_renters")
     the_dock.comment_docks = params.fetch("query_comment_docks")

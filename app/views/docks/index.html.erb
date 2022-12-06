@@ -1,3 +1,4 @@
+
 <div>
   <div>
     <h1>
@@ -5,6 +6,7 @@
     </h1>
   </div>
 </div>
+
 
 <hr>
 
@@ -31,13 +33,7 @@
         <input type="text" id="address_box" name="query_address">
       </div>
 
-      <div>
-        <label for="owner_box">
-          Owner
-        </label>
-
-        <input type="text" id="owner_box" name="query_owner">session.fetch(:owner_id)
-      </div>
+    
 
       <div>
         <label for="price_box">
@@ -47,22 +43,8 @@
         <input type="text" id="price_box" name="query_price">
       </div>
 
-      <div>
-        <label for="dock_renters_box">
-          Dock renters
-        </label>
-
-        <input type="text" id="dock_renters_box" name="query_dock_renters">
-      </div>
-
-      <div>
-        <label for="comment_docks_box">
-          Comment docks
-        </label>
-
-        <textarea id="comment_docks_box" name="query_comment_docks" rows="3"></textarea>
-      </div>
-
+      
+    
       <div>
         <label for="description_box">
           Description
@@ -83,9 +65,7 @@
   <div>
     <table border="1">
       <tr>
-        <th>
-          ID
-        </th>
+       
 
         <th>
           Image
@@ -103,14 +83,9 @@
           Price
         </th>
 
-        <th>
-          Dock renters
-        </th>
+        
 
-        <th>
-          Comment docks
-        </th>
-
+      
         <th>
           Description
         </th>
@@ -129,9 +104,7 @@
 
       <% @list_of_docks.each do |a_dock| %>
       <tr>
-        <td>
-          <%= a_dock.id %>
-        </td>
+       
 
         <td>
           <%= a_dock.image %>
@@ -149,13 +122,8 @@
           <%= a_dock.price %>
         </td>
 
-        <td>
-          <%= a_dock.dock_renters %>
-        </td>
-
-        <td>
-          <%= a_dock.comment_docks %>
-        </td>
+        
+       
 
         <td>
           <%= a_dock.description %>

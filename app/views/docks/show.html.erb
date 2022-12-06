@@ -1,3 +1,5 @@
+
+
 <div>
   <div>
     <h1>
@@ -10,14 +12,14 @@
           Go back
         </a>
       </div>
-
+<% if @the_dock.owner == session.fetch(:owner_id) %>
       <div>
         <a href="/delete_dock/<%= @the_dock.id %>">
           Delete dock
         </a>
       </div>
     </div>
-
+<%end%>
     <dl>
       <dt>
         Image
@@ -47,19 +49,8 @@
         <%= @the_dock.price %>
       </dd>
 
-      <dt>
-        Dock renters
-      </dt>
-      <dd>
-        <%= @the_dock.dock_renters %>
-      </dd>
+    
 
-      <dt>
-        Comment docks
-      </dt>
-      <dd>
-        <%= @the_dock.comment_docks %>
-      </dd>
 
       <dt>
         Description
