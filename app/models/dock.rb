@@ -22,5 +22,8 @@ class Dock < ApplicationRecord
 
   belongs_to(:leasee, { :class_name => "Renter", :foreign_key => "dock_renters" })
 
+  def poster
+    return Owner.where({ :id => self.owner }).at(0)
+  end
 
 end
