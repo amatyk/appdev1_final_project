@@ -78,6 +78,5 @@ Rails.application.routes.draw do
   # DELETE
   get("/delete_dock/:path_id", { :controller => "docks", :action => "destroy" })
 
-  #------------------------------
-
+ 
 end
